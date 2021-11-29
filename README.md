@@ -35,13 +35,18 @@ If there is another type of file outputted such as a graph in a png all the file
 
 ### Prerequisites
 #### Data sources
-The first thing that is needed is a simulation that works. I already have a basic simulation of a virus. But this will need to be modified to fit the project.
+The first thing that is needed is a simulation that works. I already have a basic simulation of a virus. But this will need to be modified to fit the project. The current ideas for necessary changes are things like adding a few stock functions that tell the program
+what the changeble variables are. And possibly turning the whole thing into a class.
 
 #### External components
 Either bootstrap or Javascript is probably necessary to save input and send it off to the program which will run the simulation.
 
 #### Similar projects
+By searching around I have found apps that seem like they do the same thing I want. The problem they all seem to share is that the simulation also needs to be made inside their system. Which is something I want to avoid as I would like to write my own version of the simulations.
 
+The product that I was able to find that closely resembles what I want is this one:
+https://www.mathworks.com/help/simulink/ug/configure-and-run-simulations-with-multiple-simulations-ui.html
+It however seems to work for only 1 variable at a time instead of as many as I want. It also seems to be stuck in their own framework instead of being able to use Python for it.
 
 #### Hardest part
 I feel like the hardest part will be the automatic loading of a new simulation. I want this project to be modular 

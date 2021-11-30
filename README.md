@@ -40,6 +40,7 @@ what the changeble variables are. And possibly turning the whole thing into a cl
 
 #### External components
 Either bootstrap or Javascript is probably necessary to save input and send it off to the program which will run the simulation.
+A python package that looks useful is Flask. It is a package that helps with web frameworks. Which overlaps with the python, web connection I want to make. It is also an easy way to get input from html into python which is what I will use it for.
 
 #### Similar projects
 By searching around I have found apps that seem like they do the same thing I want. The problem they all seem to share is that the simulation also needs to be made inside their system. Which is something I want to avoid as I would like to write my own version of the simulations.
@@ -47,6 +48,9 @@ By searching around I have found apps that seem like they do the same thing I wa
 The product that I was able to find that closely resembles what I want is this one:
 https://www.mathworks.com/help/simulink/ug/configure-and-run-simulations-with-multiple-simulations-ui.html
 It however seems to work for only 1 variable at a time instead of as many as I want. It also seems to be stuck in their own framework instead of being able to use Python for it.
+
+20sim also seems to accomplish what I want. It also has the option to change things on the fly. It however has the same problem as mathworks as it is its own simulation platform where you have to build your model instead of loading in a python model.
+https://www.20sim.com/webhelp/welcome.php
 
 #### Hardest part
 I feel like the hardest part will be the automatic loading of a new simulation. I want this project to be modular 

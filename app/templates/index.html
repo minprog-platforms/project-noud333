@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/css.css') }}">
+</head>
+
+<body>
+
+<h1>Input of the simulation</h1>
+
+<p>
+    <form method="post">
+    
+    {% for item in data %}
+    
+    {% if data_range[item] == False %}
+        {{item}}
+        <input name={{item}}, type="number", placeholder={{data[item]}}, step="0.01">
+        <input type="checkbox", name="{{item}}range">
+    {% else %}
+        {{item}}
+        {% for subset in data[item] %}
+        <input name="{{item}}_{{subset}}", type="number", placeholder={{data[item][subset]}}, step="0.01">
+        {% endfor %}
+        <input type="checkbox", name="{{item}}range">
+    {% endif %}
+
+    <br>
+
+    {% endfor %}
+    <input type="submit", value="Update data">
+
+    <br>
+    <input type="text", name="filestart", placeholder="File prefix here">
+    <input type="submit", name="start", value="Start">
+    </form>   
+    
+    
+
+    <br>
+    <a href="anothersite">Another site</a>
+</p>
+
+</body>
+</html>

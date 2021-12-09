@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Direct observation</title>
+    <title>Output of simulation</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/css.css') }}">
 </head>
 <body>
 
 <h1>
-    Trial and error
+    Output
 </h1>
+
+{% for file in files %}
+<a href="{{url_for('download_file', file=file)}}">
+    {{file}}
+</a>
+<br>
+{% endfor %}
+
 <a href='/'>return to main</a>
 </body>
 </html>

@@ -33,6 +33,9 @@ The names of these files will be changed to show what part they are of a larger 
 
 If there is another type of file outputted such as a graph in a png all the files will be outputted into a seperate map for each simulation.
 
+#### Minimum valid product
+The scope of the prototype needs to be smaller than the plan layed out above. It is the smallest piece that in my opinion captures the essence of this idea in working form. In this case I want the site to be able to handle a really simple "simulation" which will be the addition of 2 numbers. The site has to be able to specify which ranges of numbers the simulation needs to add and be able to generate JSON files and Output files for these additions. After that the output needs to be posted on another site. In terms of the docker module to run it on another site, the program it runs over there is currently hardcoded which I hope to remove in the next version.
+
 ### Prerequisites
 #### Data sources
 The first thing that is needed is a simulation that works. I already have a basic simulation of a virus. But this will need to be modified to fit the project. The current ideas for necessary changes are things like adding a few stock functions that tell the program

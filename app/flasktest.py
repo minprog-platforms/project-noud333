@@ -20,9 +20,12 @@ def main(input, config):
         data_range[variable] = False
 
     global output
-    output = []
-    for file in os.listdir("output"):
-        output.append(file)
+    output = {}
+    try:
+        for file in os.listdir("output"):
+            output[file] = 0
+    except:
+        pass
 
     # use the name of the program to be run and configure it correctly
     assert input[-3:] == ".py", "Please input a python file"
@@ -32,7 +35,7 @@ def main(input, config):
     program = input
 
     # running the app itself
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0")
 
 # Load the main page initially
 @app.route('/')
@@ -91,7 +94,8 @@ def get_values():
 # create the site for the output
 @app.route('/anothersite')
 def page2():
-    return render_template("anothersite.html", files=output)
+    output_list = os.listdir("output")
+    return render_template("anothersite.html", files=output_list)
 
 @app.route('/anothersite/<path:file>')
 def download_file(file):
@@ -113,6 +117,9 @@ def json_generator(file_name):
             new_data[item] = data[item]
 
     json_looper(new_data, lists, 0, file_name)
+    for file in os.listdir("output"):
+            output[file] = 0
+    page2()
     code_runner()
 
 def json_looper(data, lists, index, file_name):

@@ -74,23 +74,23 @@ def startpos(n_particles,infected, box, isolation):
     cure_status = []
 
     # Creating positions with random locations for the particles.
-    for n in range(n_particles):
+    for n in range(int(n_particles)):
         positions = random_step(box,0)
         x_pos.append(positions[0])
         y_pos.append(positions[1])
 
     # Creating the status lists for the particles
-    for n in range(n_particles):
+    for n in range(int(n_particles)):
         infected_check.append(0)
         isolating.append(0)
         cure_status.append(0)
 
     # Putting in the initial status of particles (by changing their value to 1)
-    for n in range(infected):
+    for n in range(int(infected)):
         infected_check.pop(n)
         infected_check.insert(n,1)
 
-    for n in range(isolation):
+    for n in range(int(isolation)):
         isolating.pop(n)
         isolating.insert(n,1)
     

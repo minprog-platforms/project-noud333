@@ -56,7 +56,7 @@ def get_values():
             if request.form[item]:
 
                 # handles changing values from the range
-                if "_" in item:
+                if "___" in item:
                     name = item.split("_")[0]
                     pos = item.split("_")[1]
                     data[name][pos] = float(request.form[item])

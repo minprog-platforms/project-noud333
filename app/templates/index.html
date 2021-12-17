@@ -21,7 +21,7 @@
     {% else %}
         {{item}}
         {% for subset in data[item] %}
-        <input name="{{item}}_{{subset}}", type="number", placeholder={{data[item][subset]}}, step="0.01">
+        <input name="{{item}}___{{subset}}", type="number", placeholder={{data[item][subset]}}, step="0.01">
         {% endfor %}
         <input type="checkbox", name="{{item}}range">
     {% endif %}

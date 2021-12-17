@@ -302,12 +302,12 @@ def main(input, output):
     file = open(input)
     data = json.load(file)
 
-    amount_particles = data["amount_particles"]
-    amount_infected = data["amount_infected"]
-    boxsize = data["boxsize"]
-    selfisolation = data["selfisolation"]
-    timesteps = data["timesteps"]
-    cure_time = data["cure_time"]
+    amount_particles = int(data["amount_particles"])
+    amount_infected = int(data["amount_infected"])
+    boxsize = int(data["boxsize"])
+    selfisolation = int(data["selfisolation"])
+    timesteps = int(data["timesteps"])
+    cure_time = int(data["cure_time"])
     reinfect = data["reinfect"]
     selfisolation_after_sick = data["selfisolation_after_sick"]
     symptom_time = data["symptom_time"]

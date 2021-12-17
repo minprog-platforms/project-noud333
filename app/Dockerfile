@@ -15,4 +15,7 @@ RUN pip3 install -r requirements.txt
 
 EXPOSE 5000
 
+RUN mkdir json
+RUN mkdir output
+
 ENTRYPOINT ["python3", "flasktest.py"]

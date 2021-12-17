@@ -49,16 +49,16 @@ def get_values():
     for item in request.form:
 
         # check if request contains , or _ which signify variables
-        if item.strip(",") in data or "_" in item:
-            item_name = item.strip(",").split("_")[0]
+        if item.strip(",") in data or "___" in item:
+            item_name = item.strip(",").split("___")[0]
 
             # checks if value has been changed
             if request.form[item]:
 
                 # handles changing values from the range
                 if "___" in item:
-                    name = item.split("_")[0]
-                    pos = item.split("_")[1]
+                    name = item.split("___")[0]
+                    pos = item.split("___")[1]
                     data[name][pos] = float(request.form[item])
 
                 # handles changing single value

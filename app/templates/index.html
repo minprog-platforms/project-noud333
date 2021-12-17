@@ -30,8 +30,13 @@
 
     {% endfor %}
     <input type="submit", value="Update data">
-
     <br>
+
+    
+    <h3>
+        Give the prefix of file names and start the simulation.
+    </h3>
+
     <input type="text", name="filestart", placeholder="File prefix here">
     <input type="submit", name="start", value="Start">
     </form>   
@@ -41,6 +46,21 @@
     <br>
     <a href="anothersite">To output</a>
 </p>
+
+<br>
+<div class="textbox">
+    <h1>How to use the simulation:</h1>
+    Within the section "Input of the simulation" there should be an input- and checkbox for every variable in the json file.
+    If the checkbox is checked and the simulation is updated, that variable will be changed to a range of values.
+    This range works in the same way as the python range function, with the first value being the lower bound, 2nd value the upperbound 
+    and 3rd value the stepsize. These values can be configured in steps of 0.01. <br>  
+    Below these buttons is the "Update data" button. <br>
+    This will save changes within the program to be used when the "Start" button is pressed.
+    This button needs to be pressed to switch a variable from a single value to a range or back.
+    <br>
+    When the "Start" button is pressed the text in the box with "File prefix here" will be used as 
+
+</div>
 
 </body>
 </html>

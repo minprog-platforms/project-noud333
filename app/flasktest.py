@@ -3,13 +3,14 @@ import json
 import argparse
 import numpy as np
 import os
+from path import Path
 
 
 app = Flask(__name__)
 
 def main(input, config):
     # loading in the data from the config file
-    file = open(config)
+    file = open("run/"+config)
     global data
     data = json.load(file)
 
@@ -54,7 +55,7 @@ def get_values():
             # checks if value has been changed
             if request.form[item]:
 
-                # handles changing values form the range
+                # handles changing values from the range
                 if "_" in item:
                     name = item.split("_")[0]
                     pos = item.split("_")[1]
@@ -150,8 +151,8 @@ def code_runner():
     """run the python program given in command line"""
 
     # import the python code into this program
-    exec("import {} as function".format(program), globals())
-    
+    exec("import {} as function".format("run."+ program), globals())
+
     # run every set of initial values
     for file in os.listdir("json"):
         # run the simulation for every json file

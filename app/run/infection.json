@@ -1,0 +1,11 @@
+{
+"amount_particles" : 100,
+"amount_infected" : 1,
+"boxsize" : 10,
+"selfisolation" : 0,
+"timesteps" : 100,
+"cure_time" : 10,
+"reinfect" : 0,
+"selfisolation_after_sick" : 1,
+"symptom_time" : 2
+}

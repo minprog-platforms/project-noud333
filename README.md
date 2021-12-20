@@ -25,5 +25,9 @@ To host this image you run the following command:
 
  A few examples of very simple "simulations" that can be run with this can be found in the app/run folder of this github page. 
 
+### The main site
+<img src="doc/final_project" width="400">
+On the picture above the main page of the site can be seen. It can change variables for every entry in the json file. If these variables are set to range mode with the checkbox multiple json files will be made for it. On the bottom is a small explanation of the controls.
+
  #### Side notes
  In case the simulation takes a while to load the main page will "crash" after the start button is pressed. This however is not a problem. The process is still working in the background and the user can just refresh the page and find the results trickle into the output page.

@@ -20,4 +20,4 @@ RUN mkdir output
 RUN rm -rf run
 RUN mkdir run
 
-ENTRYPOINT ["python3", "flasktest.py"]
+ENTRYPOINT ["python3", "simulationrunner.py"]

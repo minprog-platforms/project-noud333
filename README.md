@@ -31,3 +31,5 @@ On the picture above the main page of the site can be seen. It can change variab
 
  #### Side notes
  In case the simulation takes a while to load the main page will "crash" after the start button is pressed. This however is not a problem. The process is still working in the background and the user can just refresh the page and find the results trickle into the output page.
+
+ In the run folder of this github page there is a simulation named "Infection" this is an old python program of mine (made before this minor) and therefore does not follow the styleguide. But as this program was a tool to test my project that should not matter.

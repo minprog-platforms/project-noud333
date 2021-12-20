@@ -5,9 +5,6 @@ RUN pip3 install --upgrade pip
 
 WORKDIR /app
 
-ENV program addition.py
-ENV config config.json
-
 COPY . ./
 
 RUN pip3 install numpy

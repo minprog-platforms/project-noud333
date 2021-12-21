@@ -1,6 +1,8 @@
 # Simulation runner.
 Noud Hover
 
+Screencast: https://youtu.be/-H-tpbuEt-s
+
 ### Quick description
 This project is a tool that can be used to remotely run a simulation in bulk. \
 It allows the user to choose sets of initial conditions based on the json file that is loaded and runs the simulation based on that. \
